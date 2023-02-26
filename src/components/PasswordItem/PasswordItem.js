@@ -10,21 +10,23 @@ const PasswordItem = props => {
 
   return (
     <li className="passItem">
-      <div className={`${randomClass} initial-letter-container`}>
-        <p className="name-initial">{userName.slice(0, 1).toUpperCase()}</p>
-      </div>
-      <div className="pass-details-container">
-        <p className="web-name">{webName}</p>
-        <p className="user-name">{userName}</p>
-        {showPassword ? (
-          <p className="password">{password}</p>
-        ) : (
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
-            alt="stars"
-            className="pass-image"
-          />
-        )}
+      <div className="pass-initial-and-details-container">
+        <div className={`${randomClass} initial-letter-container`}>
+          <p className="name-initial">{userName.slice(0, 1).toUpperCase()}</p>
+        </div>
+        <div className="pass-details-container">
+          <p className="web-name">{webName}</p>
+          <p className="user-name">{userName}</p>
+          {showPassword ? (
+            <p className="password">{password}</p>
+          ) : (
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+              alt="stars"
+              className="pass-image"
+            />
+          )}
+        </div>
       </div>
       <button
         className="delete-button"
